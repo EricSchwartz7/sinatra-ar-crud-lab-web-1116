@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/posts/<%= @post.id %>" method="POST">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <p>Edit content for <%= @post.name %></p>
+      <p>Current content: <%= @post.content %></p>
+      <p>New name: <input type="text" name="name"></p>
+      <p>New content: <input type="text" name="content"></p>
+      <input type='submit' value='submit'>
+    </form>
+  </body>
+</html>
